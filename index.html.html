@@ -1,0 +1,81 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#142e4a"><title>Japan Travel Destiny | 3D Destination Carousel</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:#142c48;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,#081a2aa8,#0a1d33c9),url('original-background.png') center center/cover no-repeat;z-index:-1}main{max-width:900px;margin:auto;text-align:center;padding:24px 12px 65px}.brand{font-size:12px;letter-spacing:3px;color:#ffe5a8;font-weight:700}.title{font-family:Georgia,serif;color:#ffe3a2;text-shadow:0 4px 15px #000;font-size:clamp(30px,6vw,56px);margin:8px 0}.subtitle{font-size:14px;margin:0 auto 10px;max-width:500px;line-height:1.5}.count{font-size:12px;color:#f9d999;letter-spacing:2px}.stage{position:relative;height:clamp(300px,61vw,430px);perspective:1050px;overflow:hidden;touch-action:pan-y;user-select:none;margin:0 auto;max-width:820px}.stage:after{content:"";position:absolute;left:50%;bottom:7px;transform:translateX(-50%);width:160px;height:22px;border-radius:50%;background:#0008;filter:blur(10px)}.travel-card{position:absolute;left:50%;top:49%;width:clamp(156px,36vw,245px);height:clamp(228px,52vw,335px);margin-left:calc(clamp(156px,36vw,245px)/-2);margin-top:calc(clamp(228px,52vw,335px)/-2);border:2px solid #f7d98d;border-radius:21px;overflow:hidden;background:#112c4a;box-shadow:0 20px 30px #0009,inset 0 0 30px #edc66b44;transition:transform .48s cubic-bezier(.2,.75,.2,1),opacity .4s,filter .4s;backface-visibility:hidden;will-change:transform;pointer-events:none}.travel-card.center{border:3px solid #ffe5a0;box-shadow:0 0 35px #ffd67b99,0 25px 36px #0009}.art{height:76%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;background:radial-gradient(circle at 50% 20%,#75c6d9,#30688e 48%,#142c4b);position:relative}.art:before{content:"✿  ✧  ✿";position:absolute;top:15px;left:0;right:0;color:#fbe5ab;opacity:.8}.symbol{font-size:clamp(72px,15vw,125px);filter:drop-shadow(0 9px 7px #0c244f8a)}.card-bottom{height:24%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(135deg,#15395e,#071d34);padding:4px}.card-bottom strong{font-size:clamp(15px,3vw,23px);color:#ffe2a1}.card-bottom small{font-size:10px;letter-spacing:2px;color:#e2d0a7}.marker{position:absolute;left:50%;top:5px;transform:translateX(-50%);font-size:26px;z-index:10;filter:drop-shadow(0 2px 5px #000)}.controls{display:flex;gap:10px;max-width:550px;margin:8px auto;justify-content:center}.controls button,.cta{border:1px solid #ffe6b0;background:linear-gradient(180deg,#ffe5a0,#d99b3b);color:#271a0a;padding:15px 17px;border-radius:35px;font-weight:900;font-size:16px;cursor:pointer;flex:1;touch-action:manipulation}.controls button.secondary{background:#173b5e;color:#ffe8b7}.controls button:disabled{opacity:.45}.status{min-height:40px;font-size:15px;color:#ffe2a3;font-weight:700;padding:8px}.tip{font-size:12px;opacity:.8}.result{display:none;margin:18px auto 0;padding:20px 15px;background:#071b31ee;border:1px solid #e3bb70;border-radius:20px;max-width:640px;box-shadow:0 15px 45px #0008}.result.show{display:block;animation:pop .6s ease}@keyframes pop{from{opacity:0;transform:translateY(15px) scale(.97)}to{opacity:1;transform:none}}.result h2{font:700 clamp(25px,5vw,36px) Georgia,serif;color:#ffe4a0;margin:5px 0 12px}.result p{line-height:1.6}.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:15px auto}.actions a,.actions button{display:inline-flex;text-decoration:none;align-items:center;justify-content:center;border:1px solid #edcb82;background:#fbe2a8;color:#282015;border-radius:22px;padding:11px 14px;font-size:13px;font-weight:800;cursor:pointer}.budget{background:#17324e;border-radius:12px;padding:12px;margin:15px 0}.budget select{padding:8px;border-radius:8px;background:#fff;color:#14263b;font-size:15px;margin:5px}.budget strong{display:block;color:#ffe1a0;font-size:23px;margin:8px}.mystery{border:1px dashed #e7c77c;padding:12px;border-radius:12px;color:#ffe1a0;margin-top:14px}.foot{font-size:11px;opacity:.7;margin-top:22px;line-height:1.6}@media(max-width:480px){main{padding-top:24px}.stage{height:330px}.travel-card{width:174px;height:254px;margin-left:-87px;margin-top:-127px}.symbol{font-size:80px}.controls button{font-size:15px;padding:14px 8px}}@media(prefers-reduced-motion:reduce){.travel-card,.result{transition:none;animation:none}}
+</style></head><body><main><div class="brand">TRENDYLIFE.JP</div><h1 class="title">Japan Travel Destiny</h1><p class="subtitle">SURPRISE ME · 3D DESTINATION CAROUSEL<br>47 prefectures. One unforgettable adventure.</p><div class="count" id="counter">01 / 47</div><div class="stage" id="stage" aria-label="3D carousel of Japanese prefectures"><div class="marker">▼</div></div><div class="status" id="status" aria-live="polite">Swipe the cards or press SPIN to discover Japan!</div><div class="controls"><button id="prev" class="secondary" aria-label="Previous destination">‹</button><button id="spin">✦ SPIN</button><button id="stop" disabled>■ STOP</button><button id="next" class="secondary" aria-label="Next destination">›</button></div><p class="tip">Swipe left or right to browse · SPIN then STOP to reveal your destiny</p><section class="result" id="result" aria-live="polite"><div style="color:#ffe2a1;font-size:12px;letter-spacing:2px">DESTINATION UNLOCKED</div><h2 id="destination"></h2><p id="description"></p><div class="budget"><div>Estimate your trip · accommodation, meals and activities</div><label>Travelers <select id="people"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label><label>Days <select id="days"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>7</option></select></label><label>Style <select id="style"><option value="budget">Budget</option><option value="standard" selected>Comfort</option><option value="luxury">Luxury</option></select></label><strong id="estimate"></strong><small>Illustrative estimate only. Excludes travel to the prefecture; not a live quote.</small></div><div class="actions" id="actions"></div><div class="mystery" id="mystery"></div></section><p class="foot">Independent game prototype. Original roulette and WordPress site are unchanged.<br>Cards currently use destination symbols; photographic destination cards can be added in the next version. · Share fix v5</p></main><script>
+'use strict';
+const names=['Hokkaido','Aomori','Iwate','Miyagi','Akita','Yamagata','Fukushima','Ibaraki','Tochigi','Gunma','Saitama','Chiba','Tokyo','Kanagawa','Niigata','Toyama','Ishikawa','Fukui','Yamanashi','Nagano','Gifu','Shizuoka','Aichi','Mie','Shiga','Kyoto','Osaka','Hyogo','Nara','Wakayama','Tottori','Shimane','Okayama','Hiroshima','Yamaguchi','Tokushima','Kagawa','Ehime','Kochi','Fukuoka','Saga','Nagasaki','Kumamoto','Oita','Miyazaki','Kagoshima','Okinawa'];
+const icons=['❄️','🍎','🌲','🌊','🌾','⛰️','🌸','🌷','♨️','🏞️','⛩️','🏖️','🗼','🌉','🌾','🏔️','🏯','🌊','🗻','🏔️','🏯','🗻','🏙️','⛩️','🌿','⛩️','🏙️','🏯','🦌','🌊','🏜️','⛩️','🍑','⛩️','🌉','🌊','🌊','🍜','🌊','🏯','🍜','🏯','🌉','♨️','🌴','🌋','🏝️'];
+const guides={Saitama:'https://trendylife.jp/kawagoe-travel-guide/',Kyoto:'https://trendylife.jp/best-things-to-do-in-kyoto/',Tokyo:'https://trendylife.jp/best-things-to-do-in-tokyo/'};
+const stage=document.getElementById('stage'),status=document.getElementById('status'),result=document.getElementById('result'),spin=document.getElementById('spin'),stop=document.getElementById('stop');let index=12,spinning=false,stopping=false,timer=null,plays=0,spinTicks=0;try{plays=Number(localStorage.getItem('jtd_carousel_plays')||0)}catch(e){}
+const cards=[];for(let i=0;i<7;i++){let c=document.createElement('div');c.className='travel-card';c.innerHTML='<div class="art"><div class="symbol"></div></div><div class="card-bottom"><strong></strong><small>JAPAN DESTINY</small></div>';stage.appendChild(c);cards.push(c)}
+function mod(n){return(n+names.length)%names.length}function draw(){for(let j=-3;j<=3;j++){let c=cards[j+3],k=mod(index+j),abs=Math.abs(j);c.querySelector('.symbol').textContent=icons[k];c.querySelector('strong').textContent=names[k];c.classList.toggle('center',j===0);c.style.transform=`translateX(${j*64}%) translateY(${abs*6}px) translateZ(${-abs*95}px) rotateY(${-j*25}deg) scale(${1-abs*.10})`;c.style.opacity=abs===3?'.28':abs===2?'.55':'1';c.style.zIndex=String(10-abs);c.style.filter=abs===0?'none':`brightness(${1-abs*.16})`;}document.getElementById('counter').textContent=String(index+1).padStart(2,'0')+' / 47'}
+function step(delta){index=mod(index+delta);draw()}function browse(delta){if(spinning||stopping)return;result.classList.remove('show');step(delta);status.textContent='Ready to spin? Your next adventure awaits!'}
+document.getElementById('prev').onclick=()=>browse(-1);document.getElementById('next').onclick=()=>browse(1);let touchX=null;stage.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX},{passive:true});stage.addEventListener('touchend',e=>{if(touchX===null)return;let dx=e.changedTouches[0].clientX-touchX;touchX=null;if(Math.abs(dx)>35)browse(dx<0?1:-1)},{passive:true});
+function randomIndex(){if(crypto&&crypto.getRandomValues){let arr=new Uint32Array(1);let limit=Math.floor(4294967296/47)*47;do{crypto.getRandomValues(arr)}while(arr[0]>=limit);return arr[0]%47}return Math.floor(Math.random()*47)}
+spin.onclick=()=>{if(spinning||stopping)return;spinning=true;spinTicks=0;result.classList.remove('show');spin.disabled=true;stop.disabled=false;status.textContent='✨ Your destinations are flying past…';timer=setInterval(()=>{step(1);spinTicks++},85)};
+stop.onclick=()=>{
+ if(!spinning||stopping)return;
+ spinning=false;stopping=true;clearInterval(timer);timer=null;
+ stop.disabled=true;
+ status.textContent='✨ Slowing down… your destiny is almost here!';
+ const chosen=randomIndex();
+ // Keep the draw unbiased, but limit the STOP animation to about 2 seconds.
+ // Bigger card advances happen while moving fast; the last cards move one at a time.
+ const delays=[65,75,90,110,135,165,205,245,290,340];
+ const steps=delays.length;
+ let distance=mod(chosen-index);
+ if(distance<steps)distance+=47;
+ const lastSlowSteps=4;
+ const fastSteps=steps-lastSlowSteps;
+ const fastDistance=distance-lastSlowSteps;
+ const advances=[];
+ for(let k=0;k<fastSteps;k++){
+   advances.push(Math.floor((k+1)*fastDistance/fastSteps)-Math.floor(k*fastDistance/fastSteps));
+ }
+ for(let k=0;k<lastSlowSteps;k++)advances.push(1);
+ let n=0;
+ function slow(){
+   if(n>=steps){index=chosen;draw();stopping=false;spin.disabled=false;reveal();return}
+   step(advances[n]);
+   setTimeout(slow,delays[n]);
+   n++;
+ }
+ slow();
+};
+function addLink(text,url){let a=document.createElement('a');a.textContent=text;a.href=url;a.target='_blank';a.rel='noopener noreferrer';document.getElementById('actions').appendChild(a)}
+function estimate(){let people=+document.getElementById('people').value,days=+document.getElementById('days').value,style=document.getElementById('style').value,hotel={budget:7000,standard:13500,luxury:27000}[style],daily={budget:4500,standard:8000,luxury:15000}[style];document.getElementById('estimate').textContent='¥'+(people*((days-1)*hotel+days*daily)).toLocaleString('en-US')}
+['people','days','style'].forEach(id=>document.getElementById(id).addEventListener('change',estimate));
+
+async function copyGameLink(link,button){
+ try{
+  if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(link)}
+  else{
+   const field=document.createElement('textarea');field.value=link;field.setAttribute('readonly','');
+   field.style.position='fixed';field.style.top='0';field.style.left='-9999px';
+   document.body.appendChild(field);field.select();field.setSelectionRange(0,link.length);
+   const success=document.execCommand('copy');field.remove();if(!success)throw Error('Copy not supported');
+  }
+  button.textContent='Game link copied ✓';
+ }catch(e){window.prompt('Copy this game link:',link)}
+}
+function reveal(shared=false){let name=names[index];if(!shared){plays++;try{localStorage.setItem('jtd_carousel_plays',String(plays))}catch(e){}}status.textContent='🎉 Destination unlocked!';document.getElementById('destination').textContent=icons[index]+' '+name+'!';document.getElementById('description').textContent='Your next adventure is '+name+', Japan. Explore local attractions, discover experiences, and start planning your trip.';estimate();let actions=document.getElementById('actions');actions.replaceChildren();if(guides[name])addLink('Explore TrendyLife Guide ↗',guides[name]);addLink('Find hotels ↗','https://www.trip.com/hotels/list?city='+encodeURIComponent(name));const gameUrl=new URL('https://trendylife.github.io/japan-travel-destiny/');
+gameUrl.searchParams.set('destination',name);
+const link=gameUrl.toString();
+const message='My Japan Travel Destiny is '+name+'! 🎴\nChallenge yourself and play here:';
+let share=document.createElement('button');
+share.textContent='Share your destiny ↗';
+share.onclick=async()=>{
+  if(navigator.share){
+    try{await navigator.share({title:'Japan Travel Destiny — '+name,text:message,url:link});return}
+    catch(e){if(e.name==='AbortError')return}
+  }
+  await copyGameLink(link,share);
+};
+actions.appendChild(share);
+let copy=document.createElement('button');
+copy.textContent='Copy game link 🔗';
+copy.onclick=()=>copyGameLink(link,copy);
+actions.appendChild(copy);document.getElementById('mystery').textContent=shared?'🎴 A friend shared this destination! Press SPIN to discover your own Japan Travel Destiny.':plays%2===0?'🎁 MYSTERY BOX UNLOCKED! Challenge: discover a hidden gem in '+name+'.':'🎁 One more completed spin unlocks your Mystery Box!';result.classList.add('show');setTimeout(()=>result.scrollIntoView({behavior:'smooth',block:'nearest'}),400)}
+draw();
+// Display a shared destination on arrival without counting it as a new spin.
+try {const sharedName=new URLSearchParams(window.location.search).get('destination');const sharedIndex=names.findIndex(n=>n.toLowerCase()===(sharedName||'').toLowerCase());if(sharedIndex!==-1){index=sharedIndex;draw();reveal(true);status.textContent='🎴 Your friend shared this destination!';}}catch(e){}
+</script></body></html>
