@@ -16,7 +16,7 @@ stop.onclick=()=>{
  if(!spinning||stopping)return;
  spinning=false;stopping=true;clearInterval(timer);timer=null;
  stop.disabled=true;
- status.textContent='✨ Slowing down… your destiny is almost here!';
+ status.textContent='✨ Your destiny is almost here!';
  const chosen=randomIndex();
  // Keep the draw unbiased, but limit the STOP animation to about 2 seconds.
  // Bigger card advances happen while moving fast; the last cards move one at a time.
@@ -79,3 +79,4 @@ draw();
 // Display a shared destination on arrival without counting it as a new spin.
 try {const sharedName=new URLSearchParams(window.location.search).get('destination');const sharedIndex=names.findIndex(n=>n.toLowerCase()===(sharedName||'').toLowerCase());if(sharedIndex!==-1){index=sharedIndex;draw();reveal(true);status.textContent='🎴 Your friend shared this destination!';}}catch(e){}
 </script></body></html>
+
